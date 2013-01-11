@@ -7,7 +7,6 @@
 
 float shoot_goal= .7;
 
-
 //==================================================================
 
 //The following will be modified by the code itself, but does not contribute to physical outputs
@@ -18,7 +17,6 @@ bool shoot_enable= false;
 float shoot_diff= 0;
 
 //==================================================================
-
 
 class RobotDemo : public SimpleRobot          //Here we are defining all of the hardware
 {
@@ -50,7 +48,6 @@ public:
 
 
 	}
-	
 
 	void OperatorControl(void)				  //Initiate Tele-Op code. Here is the 2 minutes after auto
 	{
@@ -68,7 +65,6 @@ public:
 		{
 			
 		}
-
 		
 	}
 
