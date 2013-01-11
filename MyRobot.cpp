@@ -34,14 +34,13 @@ class RobotDemo : public SimpleRobot                //Here we are defining all o
 
 public:
 	RobotDemo(void):
-		stick(1)
-		stick1(2)
-		stick2(3)
-		stick3(4)
+		stick(1),
+		stick1(2),
+		stick2(3),
+		stick3(4),
 		
-		shooter(1)
-
-
+		shooter(1),
+		shoot_motor
 
 	void Autonomous(void)                     //Initiate auto code. This is the code that will be executed at the start of a match 
 	{
