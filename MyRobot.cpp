@@ -40,7 +40,6 @@ public:
 		stick3(4),
 		
 		shooter(1),
-		shoot_motor
 
 	void Autonomous(void)                     //Initiate auto code. This is the code that will be executed at the start of a match 
 	{
