@@ -19,7 +19,6 @@ ex:
 Change log:
 
 1) Created MyRobot.cpp
-
 2) Created the main layout of the document
 
 
