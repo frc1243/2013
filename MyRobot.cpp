@@ -239,9 +239,9 @@ public:
 		while (IsOperatorControl())
 		{
 
-			//------------------Compresor------------------------------
+			//------------------Compresor------------------ ------------
 			
-			if (copjoy.GetRawButton(7) == true) {
+			if (copjoy.GetRawButton(9) == true) {
 				comp.Stop();
 			}
 			if (copjoy.GetRawButton(8) == true) {
@@ -272,8 +272,8 @@ public:
 				//dsLCD->Printf(DriverStationLCD::kUser_Line1, 1, "Low Gear");
 			}
 
-			cop3axis = (((copjoy.GetRawAxis(4)-1)/2)*-1);
-			float cop2axis = (copjoy.GetRawAxis(3)*1.125);
+			cop3axis = (((copjoy.GetRawAxis(3)-1)/2)*-1);
+			float cop2axis = (copjoy.GetRawAxis(2)*1.125);
 			//float cop2axis2 = (copjoy.GetRawAxis(2));
 
 			if (ds->GetDigitalIn(7) == true) {
@@ -333,11 +333,11 @@ public:
 				
 				//shotset = ((rightjoy.GetRawAxis(3)-1)/2);
 				
-				if (copjoy.GetRawButton(6)){
+				if (copjoy.GetRawButton(3)){
 					shoothigh.Set(1);
 					shootlow.Set(0);
 				}
-				if (copjoy.GetRawButton(5)){
+				if (copjoy.GetRawButton(2)){
 					shoothigh.Set(0);
 					shootlow.Set(1);
 				}
@@ -398,19 +398,19 @@ public:
 					
 				} else if (ds->GetDigitalIn(7) == false){
 				
-				if (copjoy.GetRawButton(6)){
+				if (copjoy.GetRawButton(3)){
 					shoothigh.Set(1);
 					shootlow.Set(0);
 				}
-				if (copjoy.GetRawButton(5)){
+				if (copjoy.GetRawButton(2)){
 					shoothigh.Set(0);
 					shootlow.Set(1);
 				}
 				
-					shotset = ((rightjoy.GetRawAxis(3)-1)/-2);
+					//shotset = ((rightjoy.GetRawAxis(3)-1)/-2);
 					
 				//angle.Set(((copjoy.GetRawAxis(2)*copjoy.GetRawAxis(2)*copjoy.GetRawAxis(2))/2)*-1);
-					angle.Set((copjoy.GetRawAxis(3)*copjoy.GetRawAxis(3)*copjoy.GetRawAxis(3)));
+					angle.Set((copjoy.GetRawAxis(2)*copjoy.GetRawAxis(2)*copjoy.GetRawAxis(2)));
 			
 			}
 
@@ -531,7 +531,7 @@ public:
 				shooterset = 0;
 			}
 
-			shooter.Set(shotset);
+			shooter.Set(shooterset);
 			
 			
 			//--------------DriverStationLCD----------------
